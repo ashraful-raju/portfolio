@@ -17,11 +17,18 @@
                     <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
 
                     <div>
-                        <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Demo API Generator</h1>
+                        <a href="#" class="block font-normal text-gray-700 text-3xl md:text-4xl mb-5">Demo API
+                            Generator</a>
 
                         <p class="font-normal text-gray-500 text-sm md:text-base">A dummy data free and documented
                             API generator to facilitate <br> the process of testing the front-end portion of
                             projects.</p>
+
+                        <div class="flex space-1 mt-4">
+                            <x-badge text="PHP" color="yellow" />
+                            <x-badge text="Laravel" color="red" />
+                            <x-badge text="Tailwind Css" color="green" />
+                        </div>
                     </div>
                 </div>
 
@@ -31,11 +38,17 @@
                     <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
 
                     <div>
-                        <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Demo API Generator</h1>
+                        <a href="#" class="block font-normal text-gray-700 text-3xl md:text-4xl mb-5">Demo API
+                            Generator</a>
 
                         <p class="font-normal text-gray-500 text-sm md:text-base">A dummy data free and documented
                             API generator to facilitate <br> the process of testing the front-end portion of
                             projects.</p>
+                        <div class="flex space-1 mt-4">
+                            <x-badge text="PHP" color="yellow" />
+                            <x-badge text="Laravel" color="red" />
+                            <x-badge text="Tailwind Css" color="green" />
+                        </div>
                     </div>
                 </div>
 
@@ -45,11 +58,17 @@
                     <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
 
                     <div>
-                        <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Demo API Generator</h1>
+                        <a href="#" class="block font-normal text-gray-700 text-3xl md:text-4xl mb-5">Demo API
+                            Generator</a>
 
                         <p class="font-normal text-gray-500 text-sm md:text-base">A dummy data free and documented
                             API generator to facilitate <br> the process of testing the front-end portion of
                             projects.</p>
+                        <div class="flex space-1 mt-4">
+                            <x-badge text="PHP" color="yellow" />
+                            <x-badge text="Laravel" color="red" />
+                            <x-badge text="Tailwind Css" color="green" />
+                        </div>
                     </div>
                 </div>
             </div>

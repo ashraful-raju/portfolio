@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Str;
 
 class SettingRequest extends FormRequest
 {
@@ -29,7 +30,9 @@ class SettingRequest extends FormRequest
             'skill-title' => ['string', 'nullable'],
             'skill-about' => ['string', 'nullable'],
 
-            'contact' => ['array', 'nullable']
+            'contact-link' => ['string', 'nullable'],
+            'resume-link' => ['string', 'nullable'],
+            'image' => ['image', 'nullable'],
 
         ];
     }
@@ -37,8 +40,19 @@ class SettingRequest extends FormRequest
     function processData()
     {
         $data = [];
+        $validated = $this->validated();
 
-        foreach ($this->validated() as $key => $value) {
+        if ($this->hasFile('image')) {
+            $file = $this->file('image');
+            $fileName = Str::random(10) . '.' . $file->getClientOriginalExtension();
+            $file->move(
+                public_path('/uploads'),
+                $fileName,
+            );
+            $validated['image'] = "/uploads/{$fileName}";
+        }
+
+        foreach ($validated as $key => $value) {
             $data["user-$key"] = $value;
         }
 

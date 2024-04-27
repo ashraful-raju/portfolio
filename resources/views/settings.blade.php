@@ -17,7 +17,8 @@
                             </h2>
                         </header>
 
-                        <form method="post" action="{{ route('settings') }}" class="mt-6 space-y-6">
+                        <form method="post" action="{{ route('settings') }}" class="mt-6 space-y-6"
+                            enctype="multipart/form-data">
                             @csrf
                             @method('patch')
 
@@ -38,6 +39,33 @@
                                 <x-textarea id="about" name="about" class="mt-1 block w-full"
                                     placeholder="Enter about" :value="old('about', settings('user-about'))" />
                                 <x-input-error class="mt-2" :messages="$errors->get('about')" />
+                            </div>
+
+                            <div>
+                                <x-input-label for="contact-link" :value="__('Contact link')" />
+                                <x-text-input id="contact-link" name="contact-link" class="mt-1 block w-full"
+                                    placeholder="Enter contact link" :value="old('contact-link', settings('user-contact-link'))" />
+                                <x-input-error class="mt-2" :messages="$errors->get('contact-link')" />
+                            </div>
+                            <div>
+                                <x-input-label for="resume-link" :value="__('Resume link')" />
+                                <x-text-input id="resume-link" name="resume-link" class="mt-1 block w-full"
+                                    placeholder="Enter resume link" :value="old('resume-link', settings('user-resume-link'))" />
+                                <x-input-error class="mt-2" :messages="$errors->get('resume-link')" />
+                            </div>
+
+                            <div>
+                                <x-input-label for="image" :value="__('User Image')" />
+                                <div class="flex items-center">
+                                    <x-text-input id="image" name="image"
+                                        class="mt-1 block border p-1 mr-2 w-full" placeholder="Enter contact link"
+                                        type="file" accept="image/*" />
+                                    @if (settings('user-image'))
+                                        <img src="{{ asset(settings('user-image')) }}" alt="user"
+                                            class="w-10 h-10 rounded-full" />
+                                    @endif
+                                </div>
+                                <x-input-error class="mt-2" :messages="$errors->get('image')" />
                             </div>
 
                             <div class="flex items-center gap-4">

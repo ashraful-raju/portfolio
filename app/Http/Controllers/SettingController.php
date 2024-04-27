@@ -15,7 +15,7 @@ class SettingController extends Controller
 
     function update(SettingRequest $request)
     {
-        dd($request->all());
+        // dd($request->processData());
         Setting::addItems($request->processData());
 
         return back()->with('status', 'updated');
