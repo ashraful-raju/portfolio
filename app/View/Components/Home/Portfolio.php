@@ -2,18 +2,21 @@
 
 namespace App\View\Components\Home;
 
+use App\Models\Portfolio as PortfolioModel;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class Portfolio extends Component
 {
+    public $portfolios;
+
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        //
+        $this->portfolios = PortfolioModel::all();
     }
 
     /**

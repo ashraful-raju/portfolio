@@ -1,4 +1,4 @@
-<section class="py-10 md:py-16">
+<section class="py-10 md:py-10">
 
     <div class="container max-w-screen-xl mx-auto px-4">
 
