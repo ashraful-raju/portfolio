@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
+use App\Models\Experience;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -32,6 +34,9 @@ Route::middleware('auth')->group(function () {
         ->only(['index', 'store', 'update', 'destroy']);
 
     Route::resource('educations', EducationController::class)
+        ->only(['index', 'store', 'update', 'destroy']);
+
+    Route::resource('experiences', ExperienceController::class)
         ->only(['index', 'store', 'update', 'destroy']);
 });
 

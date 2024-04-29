@@ -14,7 +14,7 @@ class PortfolioController extends Controller
         'link' => ['string', 'required'],
         'description' => ['string', 'nullable'],
         'technologies' => ['string', 'nullable'],
-    ]; 
+    ];
     /**
      * Display a listing of the resource.
      */
@@ -41,7 +41,7 @@ class PortfolioController extends Controller
 
         return redirect()->route('portfolios.index')->with('alert', 'Project added in Portfolio successfully!');
     }
-
+ 
     /**
      * Update the specified resource in storage.
      */
