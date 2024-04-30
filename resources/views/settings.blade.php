@@ -120,6 +120,63 @@
                 </div>
             </div>
 
+
+            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+                <div class="max-w-xl">
+
+                    <section class="mt-4">
+                        <header>
+                            <h2 class="text-lg font-medium text-gray-900">
+                                {{ __('Contact Social Links') }}
+                            </h2>
+                        </header>
+
+                        <form method="post" action="{{ route('settings.contact') }}" class="mt-6 space-y-6">
+                            @csrf
+                            @method('patch')
+
+                            <div>
+                                <x-input-label for="facebook" :value="__('Facebook')" />
+                                <x-text-input id="facebook" name="social_facebook" type="text"
+                                    class="mt-1 block w-full" placeholder="Enter facebook link" :value="old('social_facebook', settings('social_facebook'))"
+                                    autocomplete="link" />
+                                <x-input-error class="mt-2" :messages="$errors->get('social_facebook')" />
+                            </div>
+                            <div>
+                                <x-input-label for="twitter" :value="__('Twitter')" />
+                                <x-text-input id="twitter" name="social_twitter" type="text"
+                                    class="mt-1 block w-full" placeholder="Enter twitter link" :value="old('social_twitter', settings('social_twitter'))"
+                                    autocomplete="link" />
+                                <x-input-error class="mt-2" :messages="$errors->get('social_twitter')" />
+                            </div>
+                            <div>
+                                <x-input-label for="linkedin" :value="__('LinkedIn')" />
+                                <x-text-input id="linkedin" name="social_linkedin" type="text"
+                                    class="mt-1 block w-full" placeholder="Enter linkedin link" :value="old('social_linkedin', settings('social_linkedin'))"
+                                    autocomplete="link" />
+                                <x-input-error class="mt-2" :messages="$errors->get('social_linkedin')" />
+                            </div>
+                            <div>
+                                <x-input-label for="github" :value="__('Github')" />
+                                <x-text-input id="github" name="social_github" type="text"
+                                    class="mt-1 block w-full" placeholder="Enter github link" :value="old('social_github', settings('social_github'))"
+                                    autocomplete="link" />
+                                <x-input-error class="mt-2" :messages="$errors->get('social_github')" />
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <x-primary-button>{{ __('Save') }}</x-primary-button>
+
+                                @if (session('status') === 'updated')
+                                    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
+                                        class="text-sm text-gray-600">{{ __('Saved.') }}</p>
+                                @endif
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
         </div>
     </div>
 </x-app-layout>

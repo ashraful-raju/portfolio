@@ -6,6 +6,7 @@ use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\TestimonialController;
 use App\Models\Experience;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,7 @@ Route::middleware('auth')->group(function () {
     // Application settings routes
     Route::get('/settings', [SettingController::class, 'index'])->name('settings');
     Route::patch('/settings', [SettingController::class, 'update']);
+    Route::patch('/settings/contact', [SettingController::class, 'updateContact'])->name('settings.contact');
 
     // Resource routes
     Route::resource('services', ServiceController::class)
@@ -37,6 +39,9 @@ Route::middleware('auth')->group(function () {
         ->only(['index', 'store', 'update', 'destroy']);
 
     Route::resource('experiences', ExperienceController::class)
+        ->only(['index', 'store', 'update', 'destroy']);
+
+    Route::resource('testimonials', TestimonialController::class)
         ->only(['index', 'store', 'update', 'destroy']);
 });
 

@@ -20,4 +20,20 @@ class SettingController extends Controller
 
         return back()->with('status', 'updated');
     }
+
+    function updateContact(Request $request)
+    {
+        $data = $request->validate([
+            'social_facebook' => ['nullable', 'string', 'url'],
+            'social_twitter' => ['nullable', 'string', 'url'],
+            'social_linkedin' => ['nullable', 'string', 'url'],
+            'social_github' => ['nullable', 'string', 'url'],
+        ]);
+
+        // social_facebook => https://fb.com/raju
+
+        Setting::addItems($data);
+
+        return back()->with('status', 'updated');
+    }
 }

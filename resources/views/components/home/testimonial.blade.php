@@ -8,59 +8,20 @@
             studied</p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-gray-50 px-8 py-10 rounded-md">
+            @foreach ($testimonials as $testimonial)
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
 
-                <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
-                    adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="font-normal text-gray-500 text-md mb-4">{{ $testimonial->review }}</p>
 
-                <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span
-                        class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
-            </div>
+                    <h6 class="font-semibold text-gray-500 text-md">{{ $testimonial->name }} <span
+                            class="font-medium text-gray-300 text-sm"> - {{ $testimonial->designation }} at <a
+                                href="{{ $testimonial->link }}">{{ $testimonial->company }}</a>
+                        </span>
+                    </h6>
+                </div>
+            @endforeach
 
-            <div class="bg-gray-50 px-8 py-10 rounded-md">
 
-                <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
-                    adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span
-                        class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
-            </div>
-
-            <div class="bg-gray-50 px-8 py-10 rounded-md">
-
-                <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
-                    adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span
-                        class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
-            </div>
-
-            <div class="bg-gray-50 px-8 py-10 rounded-md">
-
-                <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
-                    adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span
-                        class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
-            </div>
-
-            <div class="bg-gray-50 px-8 py-10 rounded-md">
-
-                <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
-                    adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span
-                        class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
-            </div>
-
-            <div class="bg-gray-50 px-8 py-10 rounded-md">
-
-                <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
-                    adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span
-                        class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
-            </div>
         </div>
 
     </div>

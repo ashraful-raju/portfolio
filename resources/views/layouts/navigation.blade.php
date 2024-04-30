@@ -15,20 +15,29 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
                     <x-nav-link :href="route('settings')" :active="request()->routeIs('settings')">
                         {{ __('Settings') }}
                     </x-nav-link>
+
                     <x-nav-link :href="route('services.index')" :active="request()->routeIs('services.index')">
                         {{ __('Services') }}
                     </x-nav-link>
+
                     <x-nav-link :href="route('portfolios.index')" :active="request()->routeIs('portfolios.index')">
                         {{ __('Portfolio') }}
                     </x-nav-link>
+
                     <x-nav-link :href="route('educations.index')" :active="request()->routeIs('educations.index')">
                         {{ __('Education') }}
                     </x-nav-link>
+
                     <x-nav-link :href="route('experiences.index')" :active="request()->routeIs('experiences.index')">
                         {{ __('Experience') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('testimonials.index')" :active="request()->routeIs('testimonials.index')">
+                        {{ __('Testimonial') }}
                     </x-nav-link>
                 </div>
             </div>
