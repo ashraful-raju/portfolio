@@ -21,15 +21,15 @@ Open your terminal in computer run these commands sequencially.
 
 ## Screenshots
 
-![Login](./screenshots/login.png)
-![register](./screenshots/register.png)
-![Dashboard](./screenshots/dashboard.png)
+![home-page](./screenshots/home-page.png)
+![dashboard](./screenshots/dashboard.png)
+![educations](./screenshots/educations.png)
+![experiences](./screenshots/experiences.png)
+![portfolios](./screenshots/portfolios.png)
 ![profile](./screenshots/profile.png)
-![add-contact](./screenshots/add-contact.png)
-![list-contact](./screenshots/list-contact.png)
-![view-contact](./screenshots/view-contact.png)
-![edit-contact](./screenshots/edit-contact.png)
-![update_delete-info](./screenshots/update_delete-info.png)
+![services](./screenshots/services.png)
+![settings](./screenshots/settings.png)
+![testimonials](./screenshots/testimonials.png)
 
 ## Notes
 
